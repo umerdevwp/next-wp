@@ -237,3 +237,16 @@ type FilterBarProps = {
   selectedTag?: string;
   selectedCategory?: string;
 };
+
+
+
+export type Product = {
+  id: number;
+  slug: string;
+  title: string;
+  content: string;
+  image: string;
+  meta: any[];
+  description: string;
+  photos: any[];
+};

@@ -26,10 +26,10 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "WordPress & Next.js Starter by 9d8",
+  title: "WordPress & Next.js Starter",
   description:
     "A starter template for Next.js with WordPress as a headless CMS.",
-  metadataBase: new URL("https://wp.9d8.dev"),
+  metadataBase: new URL("https://github.com/umerdevwp/"),
 };
 
 // Revalidate content every hour
@@ -45,6 +45,7 @@ export default function RootLayout({
       <head />
       <body
         className={cn("min-h-screen font-sans antialiased", fontSans.variable)}
+        suppressHydrationWarning={true}
       >
         <ThemeProvider
           attribute="class"
@@ -102,7 +103,7 @@ const Nav = ({ className, children, id }: NavProps) => {
             ))}
           </div>
           <Button asChild className="hidden sm:flex">
-            <Link href="https://github.com/9d8dev/next-wp">Get Started</Link>
+            <Link href="https://github.com/umerdevwp/">Get Started</Link>
           </Button>
           <MobileNav />
         </div>
@@ -117,8 +118,8 @@ const Footer = () => {
       <Section>
         <Container className="grid md:grid-cols-[1.5fr_0.5fr_0.5fr] gap-12">
           <div className="flex flex-col gap-6 not-prose">
-            <Link href="/">
-              <h3 className="sr-only">brijr/components</h3>
+            <Link href="https://github.com/umerdevwp/">
+              <h3 className="sr-only">CVision</h3>
               <Image
                 src={Logo}
                 alt="Logo"
@@ -159,8 +160,8 @@ const Footer = () => {
         <Container className="border-t not-prose flex flex-col md:flex-row md:gap-2 gap-6 justify-between md:items-center">
           <ThemeToggle />
           <p className="text-muted-foreground">
-            © <a href="https://9d8.dev">9d8</a>. All rights reserved.
-            2024-present.
+            © <a href="/">CVision</a>. All rights reserved.
+            2024.
           </p>
         </Container>
       </Section>

@@ -25,7 +25,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <BackButton />
         <h1 className="pt-12">{page.title.rendered}</h1>
         <div dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
-      </Container>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas maiores ratione quaerat alias quo dolor dolorum recusandae omnis illo aliquid iste ex neque voluptatum, qui similique debitis ipsum optio ad. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum perferendis impedit optio unde illum mollitia labore facere. Explicabo impedit blanditiis libero, ipsa delectus quos! Amet tempora cumque reiciendis minus libero!</p>
+        </Container>
     </Section>
   );
 }

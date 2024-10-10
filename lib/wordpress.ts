@@ -9,6 +9,7 @@ import {
   Category,
   Tag,
   Page,
+  Product,
   Author,
   FeaturedMedia,
 } from "./wordpress.d";
@@ -195,4 +196,19 @@ export async function getFeaturedMediaById(id: number): Promise<FeaturedMedia> {
   const response = await fetch(url);
   const featuredMedia: FeaturedMedia = await response.json();
   return featuredMedia;
+}
+
+export async function getAllProducts(): Promise<Product[]> {
+  const url = getUrl("/wp-json/wp/v2/products");
+  const response = await fetch(url);
+  const products: Product[] = await response.json();
+  return products;
+}
+
+export async function getProductBySlug(slug: string): Promise<Product> {
+  const url = getUrl("/wp-json/wp/v2/product", { slug });
+  //console.log(url);
+  const response = await fetch(url);
+  const product: Product[] = await response.json();
+  return product[0];
 }
